@@ -1,5 +1,5 @@
 # Personal-Deployment-Doc-Ubuntu
-Berisikan dokumentasi tutorial deployment untuk ubuntu OS, disini merupakan hasil dari ngulik personal (<b>beberapa hal tidak mengikuti konvensi atau praktik industri<b>).
+Berisikan tutorial deployment untuk ubuntu OS dan dokumentasi hasil ngulik personal. Language : Indonesia.
 
 ## Sub Tema :
 - <a href="https://github.com/Nanang-Wahyudi/DeployMOOC">Deployment dengan Nginx dan Ubuntu (Studi Kasus : Spring Application) </a> 
