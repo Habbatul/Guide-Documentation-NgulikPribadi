@@ -2,7 +2,7 @@
 Berisikan tutorial deployment untuk ubuntu OS, disini merupakan hasil dari ngulik personal (beberapa hal tidak mengikuti konvensi atau praktik industri).
 
 ## Sub Tema (Klick untuk membuka) :
-- <a href="https://github.com/Nanang-Wahyudi/DeployMOOC">Deployment dengan Nginx dan Ubuntu </a> 
+- <a href="https://github.com/Nanang-Wahyudi/DeployMOOC">Deployment dengan Nginx dan Ubuntu (Studi Kasus : Spring Application) </a> 
 - <a href="https://github.com/Habbatul/Personal-Deployment-Doc-Ubuntu/blob/main/Simple-Deployment-withDocker-NginxOutside.md">Deployment simple dengan docker (Nginx diluar container tanpa docker compose), <b>Cara Termudah untuk satu app</b></a>
 
 ## Plan Selanjutnya :
