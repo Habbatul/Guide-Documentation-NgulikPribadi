@@ -9,13 +9,13 @@
 - #### coba jalankan pada lokal
   #### Perintah untuk menjalankan container adalah :
 
-  `docker run -dti -e <nama_var1>='<value_var1>' -e <nama_var2>='<value_var2>' -p <port-akses>:<port-container> --name <nama_container> <nama_image>`
+  `docker run -dti -e <nama_var1>='<value_var1>' -e <nama_var2>='<value_var2>' -p <port-host>:<port-container> --name <nama_container> <nama_image>`
   - Cara membuat variable lingkungan dapat menambahkan sebanyak yang dibutuhkan dengan mengulang opsi -e.
   - Untuk penjelasan lainnya dapat diakses pada url berikut : 
     
   atau bisa juga menggunakan
 
-  `docker run -dti --env-file </directory/nama_file> -p <port-akses>:<port-container> --name <nama_container> <nama_image>`
+  `docker run -dti --env-file </directory/nama_file> -p <port-host>:<port-container> --name <nama_container> <nama_image>`
 
 - #### bila berjalan lancar maka push image ke dockerhub
   #### Perintah untuk login (pastikan sudah login untuk melakukan push ke repo) :
@@ -66,7 +66,7 @@
   #### Jalankan perintah docker run (seperti sebelumnya di lokal)
   <b>Peringatan </b> : Disini belum melakukan setingan Docker Network sehingga akan default network bridge pada container yang berjalan
 
-  `docker run -dti --env-file </directory/nama_file> -p <port-akses>:<port-container> --name <nama_container> <nama_image>`
+  `docker run -dti --env-file </directory/nama_file> -p <port-host>:<port-container> --name <nama_container> <nama_image>`
 
   #### Cek apakah container berjalan
   `docker ps`
@@ -84,7 +84,7 @@
   Untuk mengatasi ini ada beberapa cara :
   - Bisa melakukan inspect `docker inspect my_postgres`. Lalu scroll kebawah sampai menemukan container akan berjalan default pada network bridge, lalu gunakan ip address pada bagaian bridge tersebut sebagai pengganti keyword 'localhost' pada konfigurasi database contoh :
   
-    `url_postgres=jdbc:postgresql://localhost:<port_akses>/<database_name>` ubah menjadi `url_postgres=jdbc:postgresql://<alamat_ip>:<port_akses>/<database_name>` 
+    `url_postgres=jdbc:postgresql://localhost:<port-host>/<database_name>` ubah menjadi `url_postgres=jdbc:postgresql://<alamat_ip>:<port-host>/<database_name>` 
     
     contoh :
   
