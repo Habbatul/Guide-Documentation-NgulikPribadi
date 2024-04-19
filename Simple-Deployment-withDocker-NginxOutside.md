@@ -13,7 +13,7 @@
   - Cara membuat variable lingkungan dapat menambahkan sebanyak yang dibutuhkan dengan mengulang opsi -e.
   - Untuk penjelasan lainnya dapat diakses pada url berikut : 
     
-  atau bisa juga menggunakan
+  atau bila env-nya banyak bisa juga menggunakan file .list, dengan :
 
   `docker run -dti --env-file </directory/nama_file> -p <port-host>:<port-container> --name <nama_container> <nama_image>`
 
