@@ -5,6 +5,7 @@ Berisikan tutorial deployment untuk ubuntu OS dan dokumentasi hasil ngulik perso
 - <a href="https://github.com/Nanang-Wahyudi/DeployMOOC">Deployment dengan Nginx dan Ubuntu (Studi Kasus : Spring Application) </a> 
 - <a href="https://github.com/Habbatul/Personal-Deployment-Doc-Ubuntu/blob/main/Simple-Deployment-withDocker-NginxOutside.md">Deployment simple dengan docker (Nginx diluar container tanpa docker compose), <b>Cara Termudah untuk satu app</b></a>
 - <a href="https://github.com/Habbatul/Personal-Deployment-Doc-Ubuntu/blob/main/postgresinDocker.md">PostgreSQL di docker</a>
+- <a href="https://github.com/Habbatul/Personal-Deployment-Doc-Ubuntu/blob/main/DeploymentForThreeJS.md">Deployment Three JS (Vite & Github Actions)</a>
 
 ## Plan Selanjutnya :
 - <a href="">Deployment Naive (Ubuntu tanpa Nginx)</a>
