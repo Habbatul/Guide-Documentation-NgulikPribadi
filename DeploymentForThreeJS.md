@@ -46,6 +46,6 @@
 - Buat folder .github/workflow lalu buat file deploy.yaml, isi file tersebut dengan konfigurasi yang dibutuhkan, contohnya pada : https://github.com/Habbatul/3D-Nostalgia/blob/main/.github/workflows/deploy.yml
 - Setting pada repository project dengan pilih **Setting** -> **Action** -> **General** -> **Workflow permissions** -> pilih **Read and write permissions**
 - Lakukan Commit-Push project Threejs, lihat apakah Github Action berjalan, bila gagal coba lakukan re-run
-- Bila berhasil, pada **Setting** -> **Github Pages** pilih branch hasil deployment, bila mengikuti konfigurasi pada url yaml diatas maka branch nya adalah gh-pages (ini disesuaikan dengan konfigurasi yaml).
+- Bila berhasil, pada **Setting** -> **Github Pages** pilih branch hasil deployment, bila mengikuti konfigurasi pada url yaml diatas maka branch nya adalah gh-pages -> ini bila tidak melakukan perubahan publish_branch dengan deploy menggunakan peaceiris/actions-gh-pages (ini disesuaikan dengan konfigurasi yaml yang digunakan).
 
   
