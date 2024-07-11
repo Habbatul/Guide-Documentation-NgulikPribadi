@@ -1,5 +1,5 @@
-# Personal-Ngulik
-Berisikan guide hasil ngulik-ngulik pribadi
+# 🖥️ Personal Ngulik
+Berisikan dokumentasi guide hasil ngulik pribadi dengan bahasa Indonesia.
 
 ## Sub Tema :
 - <a href="https://github.com/Nanang-Wahyudi/DeployMOOC">Deployment dengan Nginx dan Ubuntu (Studi Kasus : Spring Application) </a> 
