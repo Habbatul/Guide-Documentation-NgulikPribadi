@@ -1,6 +1,17 @@
 ## PostgreSQL di Docker
 pada konfigurasi database suatu aplikasi pastikan bahwa akun (username dan password) adalah pemilik dari database tersebut.
 
+> Jangan lupa titik koma tiap memasukan query
+
+- #### Pull PostgreSql
+  lastest atau pilih versi
+  ```
+  docker pull postgres:latest 
+  ``` 
+- #### Melakukan running container database
+  ```
+  docker run -e POSTGRES_PASSWORD='<yourPassword>' --name <containerName> postgres
+  ```
 - #### Masuk ke dalam bash kontainer menggunakan docker exec:
   `docker exec -it <container_name_or_id> bash`
 
@@ -19,6 +30,12 @@ pada konfigurasi database suatu aplikasi pastikan bahwa akun (username dan passw
 
 - #### Untuk keluar dari bash kontainer :
   `exit`
+
+## Berkaitan dengan Query di PSQL
+
+- #### Membuat Database
+  pastikan sudah masuk psql
+  `CREATE DATABASE <database_name>`
 
 - #### Beberapa command yang berbeda dengan mysql :
   - use database : `\c <nama_database>` --> `USE <nama_database>;`
