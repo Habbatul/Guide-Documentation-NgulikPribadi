@@ -92,6 +92,12 @@
 - #### pastikan Nginx dan Certbot (SSL) sudah diinstall dan dikonfigurasikan sesuai url berikut : 
   - Bagian NGINX : https://github.com/Nanang-Wahyudi/DeployMOOC?tab=readme-ov-file#create-an-nginx-config-file\
   - Bagian SSL : https://github.com/Nanang-Wahyudi/DeployMOOC?tab=readme-ov-file#sslhttps
+ 
+- #### Database di docker
+  Untuk database guide ada <a href="https://github.com/Habbatul/Guide-Documentation-NgulikPribadi/blob/main/postgresinDocker.md">Disini</a>
+
+### Berkaitan dengan container aplikasi kamu :
+
 - #### lakukan pull dari dockerhub :
   #### lakukan login seperti sebelumnya di lokal
   `docker login`
@@ -124,6 +130,7 @@
 
   #### Cek log aplikasi/container
   `docker logs -f <nama_container>` atau `docker logs --tail 5 <nama_container>`
+
 
 <br><br>
 ## 3. Peringatan untuk Aplikasi yang Membutuhkan Database (Berjalan pada Container yang Sama)
