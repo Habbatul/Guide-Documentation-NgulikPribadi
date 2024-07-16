@@ -38,6 +38,57 @@
   
 <br><br>
 ## 2. Hal yang di lakukan di server (Ubuntu OS)
+
+  #### cara install docker di ubuntu
+
+1. **Perbarui Daftar Paket:**
+   ```sh
+   sudo apt update
+   ```
+
+2. **Instal Paket Prasyarat:**
+   ```sh
+   sudo apt install apt-transport-https ca-certificates curl software-properties-common
+   ```
+
+3. **Tambahkan GPG Key Docker:**
+   ```sh
+   curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+   ```
+
+4. **Tambahkan Repositori Docker:**
+   ```sh
+   echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   ```
+
+5. **Perbarui Daftar Paket Lagi:**
+   ```sh
+   sudo apt update
+   ```
+
+6. **Instal Docker:**
+   ```sh
+   sudo apt install docker-ce
+   ```
+
+7. **Cek Status Docker:**
+   ```sh
+   sudo systemctl status docker
+   ```
+
+   Untuk memastikan Docker berjalan dengan baik, Anda bisa melihat statusnya di sini.
+
+8. **Verifikasi Instalasi Docker:**
+   ```sh
+   docker --version
+   ```
+
+   Anda juga dapat menjalankan contoh container untuk memastikan semuanya berjalan dengan baik:
+   ```sh
+   docker run hello-world
+   ```
+
+
 - #### pastikan Nginx dan Certbot (SSL) sudah diinstall dan dikonfigurasikan sesuai url berikut : 
   - Bagian NGINX : https://github.com/Nanang-Wahyudi/DeployMOOC?tab=readme-ov-file#create-an-nginx-config-file\
   - Bagian SSL : https://github.com/Nanang-Wahyudi/DeployMOOC?tab=readme-ov-file#sslhttps
