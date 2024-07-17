@@ -1,40 +1,49 @@
 #### Peringatan : Guide disini mungkin tidak mengajarkan cara penggunaan Nginx dan Setting SSL dan tidak terikat dengan deployment aplikasi tertentu. Sehingga harus memahami dan menyambungkan petunjuk disini dengan halaman : https://github.com/Nanang-Wahyudi/DeployMOOC untuk konfigurasi Nginx dan SSL terutama untuk aplikasi Spring Boot
   
 ## 1. Hal yang di lakukan di lokal
-- #### lakukan pembuatan image
-  #### Perintah untuk membangun image berdasar dockerfile adalah :
-
-  `docker build -t <nama_image> .`
-  
-- #### coba jalankan pada lokal
-  #### Perintah untuk menjalankan container adalah :
-
-  `docker run -dti -e <nama_var1>='<value_var1>' -e <nama_var2>='<value_var2>' -p <port-host>:<port-container> --name <nama_container> <nama_image>`
-  - Cara membuat variable lingkungan dapat menambahkan sebanyak yang dibutuhkan dengan mengulang opsi -e.
-  - Untuk penjelasan lainnya dapat diakses pada url berikut : 
+1.  #### lakukan pembuatan image
+    **Perintah untuk membangun image berdasar dockerfile adalah :**
     
-  atau bila env-nya banyak bisa juga menggunakan file .list, dengan :
-
-  `docker run -dti --env-file </directory/nama_file> -p <port-host>:<port-container> --name <nama_container> <nama_image>`
-
-- #### bila berjalan lancar maka push image ke dockerhub
-  #### Perintah untuk login (pastikan sudah login untuk melakukan push ke repo) :
+    ```sh
+    docker build -t <nama_image> .
+    ```
   
-  `docker login` lalu masukan username dan password
+2.  #### coba jalankan pada lokal
+    **Perintah untuk menjalankan container adalah :**
+    ```sh
+    docker run -dti -e <nama_var1>='<value_var1>' -e <nama_var2>='<value_var2>' -p <port-host>:<port-container> --name <nama_container> <nama_image>
+    ```
+    
+    - Cara membuat variable lingkungan dapat menambahkan sebanyak yang dibutuhkan dengan mengulang opsi -e.
+    - Untuk penjelasan lainnya dapat diakses pada url berikut : 
+      
+    atau bila env-nya banyak bisa juga menggunakan file .list, dengan :
+    ```sh
+    docker run -dti --env-file </directory/nama_file> -p <port-host>:<port-container> --name <nama_container> <nama_image>
+    ```
 
-  bila ingin login ke registry Docker lainnya, gunakan perintah :
-
-  `docker login <registry_URL>`
-`
-  #### Perintah untuk membuat tag :
+3. #### bila berjalan lancar maka push image ke dockerhub
+    **Perintah untuk login (pastikan sudah login untuk melakukan push ke repo) :**
+    ```sh
+    docker login
+    ```
+    
+    lalu masukan username dan password.
+    bila ingin login ke registry Docker lainnya, gunakan perintah :
+    ```sh
+    sh docker login <registry_URL>
+    ```
+    
+    #### Perintah untuk membuat tag :
+    ```sh
+    docker tag <nama_image> <username>/<nama_image>
+    ```
+    #### Perintah untuk melakukan push ke dockerhub :
+    ```sh
+    docker push <hasil_tag>
+    ```
   
-  `docker tag <nama_image> <username>/<nama_image> `
-
-  #### Perintah untuk melakukan push ke dockerhub :
-  
-  `docker push <hasil_tag> `
-  
-- #### otomatis akan dibuatkan repository bila belum membuat (namun public), jangan lupa setting ke private bila perlu (bisa melalui dockerhub browser).
+4. #### Otomatis akan dibuatkan repository bila belum membuat (namun public), jangan lupa setting ke private bila perlu (bisa melalui dockerhub browser).
   
 <br><br>
 ## 2. Hal yang di lakukan di server (Ubuntu OS)
@@ -100,20 +109,29 @@
 
 - #### lakukan pull dari dockerhub :
   #### lakukan login seperti sebelumnya di lokal
-  `docker login`
+  ```sh
+  docker login
+  ```
+  
   #### Lakukan pull repo
-  `docker pull <username>/<nama_image>:<tag>`
+  ```sh
+  docker pull <username>/<nama_image>:<tag>`
+  ```
   
   atau jika ingin menarik image dari registry Docker lainnya
 
-  `docker pull <registry_URL>/<nama_image>:<tag>`
+  ```sh
+  docker pull <registry_URL>/<nama_image>:<tag>
+  ```
 
 - #### Melakukan Running Container di Server :
   #### Lakukan pembuatan file env (bila env nya banyak)
-  `vim /etc/env.list `
+  ```sh
+  vim /etc/env.list
+  ```
 
-  lalu buat env.list, seperti :
-   ```
+  lalu buat `env.list`, seperti :
+  ```sh
    url_postgres=jdbc:uhuy://111.11.0.1:1111/uhuy
    username_db=uhuy 
    password_db=uhuy
@@ -123,14 +141,19 @@
   #### Jalankan perintah docker run (seperti sebelumnya di lokal)
   <b>Peringatan </b> : Disini belum melakukan setingan Docker Network sehingga akan default network bridge pada container yang berjalan
 
-  `docker run -dti --env-file </directory/nama_file> -p <port-host>:<port-container> --name <nama_container> <nama_image>`
+  ```sh
+  docker run -dti --env-file` </directory/nama_file> -p <port-host>:<port-container> --name <nama_container> <nama_image>
+  ```
 
   #### Cek apakah container berjalan
-  `docker ps`
+  ```sh
+  docker ps
+  ```
 
   #### Cek log aplikasi/container
-  `docker logs -f <nama_container>` atau `docker logs --tail 5 <nama_container>`
-
+  ```sh
+  docker logs -f <nama_container>` atau `docker logs --tail 5 <nama_container>
+  ```
 
 <br><br>
 ## 3. Peringatan untuk Aplikasi yang Membutuhkan Database (Berjalan pada Container yang Sama)
