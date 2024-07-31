@@ -7,8 +7,15 @@
 
 2. **Jalankan container MySQL:**
    ```sh
-   docker run --name mysql-container -p 3306:3306 -d mysql:latest
+   docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=<terserah> -p 3306:3306 -d mysql:latest
    ```
+   **ada pesan error kalo ga ngasih salah satu dibawah ini**
+   
+    You need to specify one of the following as an environment variable:
+    - MYSQL_ROOT_PASSWORD
+    - MYSQL_ALLOW_EMPTY_PASSWORD
+    - MYSQL_RANDOM_ROOT_PASSWORD
+
 
 ### Mengimpor file SQL ke dalam MySQL
 1.  **Salin file SQL ke dalam container MySQL:**
