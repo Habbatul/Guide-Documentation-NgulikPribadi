@@ -60,5 +60,15 @@
    ```
  **Jika ada entri dengan host sebagai %, maka pengguna dapat terhubung dari semua alamat IP.**
 
+
  sumber lengkap di : https://github.com/docker-library/mysql/issues/275
+
+
+untuk menambahkan user root dengan host % di MySQL:
+```sh
+CREATE USER 'root'@'%' IDENTIFIED BY 'root_password';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+```
+
  
