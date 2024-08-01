@@ -12,18 +12,17 @@ Berisikan dokumentasi guide hasil ngulik pribadi dengan bahasa Indonesia.
   - push dan pull image ke dan dari dockerhub
   - spring doc swagger agar bisa akses https untuk menghindari cors
   - instalasi docker
+  - cek log dan cek ip container untuk keperluan deploy tanpa conf network
 
 - <a href="https://github.com/Habbatul/Guide-Documentation-NgulikPribadi/blob/main/Apache_dengan_Nginx.md">Server Apache dengan Nginx sebagai reverse proxy</a>
-  - build dan run image dengan env
-  - push dan pull image ke dan dari dockerhub
-  - spring doc swagger agar bisa akses https untuk menghindari cors
-  - instalasi docker
-  - cek log dan cek ip container untuk keperluan deploy tanpa conf network
-    
-- <a href="https://github.com/Habbatul/Guide-Documentation-NgulikPribadi/blob/main/apache-with-php.md">Install PHP pada server Apache</a>
   - mengubah port apache
   - cek log apache dan port service
   - nginx reverse proxy ke apache
+    
+- <a href="https://github.com/Habbatul/Guide-Documentation-NgulikPribadi/blob/main/apache-with-php.md">Install PHP pada server Apache</a>
+  - instalasi php (modul dasar) untuk apache
+  - mengecek dan menambah ekstensi php
+  - setting untuk membaca `.htaccess`
 
 - <a href="https://github.com/Habbatul/Personal-Deployment-Doc-Ubuntu/blob/main/postgresinDocker.md">PostgreSQL di docker</a>
   - instalasi postgres di docker
