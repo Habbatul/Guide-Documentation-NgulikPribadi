@@ -73,3 +73,25 @@
     ```sh
     sudo systemctl restart apache2
     ```
+
+## Untuk kepemilikan suatu file dan folder projeck PHP di Ubuntu
+
+Jika ada fitur upload, delete file di folder, write data disuatu file, dsj yang mempengaruhi perubahan suatu file atau folder maka perlu mengganti kepemilikan dari file atau folder tersebut. 
+
+1. Cek kepemilikan dan hak akses dari suatu file atau folder dengan
+   ```sh
+   sudo ls -l <folder>
+   ```
+3. Ganti kepemilikan ke www-data:www-data agar dapat melakukan perubahan melalui fitur web
+   ```sh
+   sudo chown -R www-data:www-data /var/www/html/<folder_upload_atau_eksekusi_file>
+   ```
+5. Bila fitur tidak berjalan mungkin ada perbedaan user/groups, bisa dicek dengan
+   ```sh
+   cat /etc/apache2/apache2.conf | grep -E '^User|^Group'
+   ```
+   Lalu cek env_var sesuai dengan value diatas tersebut
+   ```sh
+   cat /etc/apache2/envvars | grep -E 'APACHE_RUN_USER|APACHE_RUN_GROUP'
+   ```
+   
