@@ -31,6 +31,7 @@
       apt install php-imagick
       apt install php-gd
       apt install php-mysqli
+      apt install php-curl
       ```
 
 5. Untuk remove instalasi modul terkait
@@ -44,7 +45,7 @@
       ```
     hapus paket tambahan php
       ```sh
-      sudo apt purge php-imagick php-pdo php-mysql php-mysqli
+      sudo apt purge php-imagick php-pdo php-mysql php-mysqli php-curl
       ```
     hapus paket lain yang tidak diperlukan
       ```sh
@@ -74,7 +75,9 @@
     sudo systemctl restart apache2
     ```
 
-## Untuk kepemilikan suatu file dan folder projeck PHP di Ubuntu
+<br>
+
+## Bila fitur upload, write file, delete file, dsj pada server ubuntu tidak berjalan
 
 Jika ada fitur upload, delete file di folder, write data disuatu file, dsj yang mempengaruhi perubahan suatu file atau folder maka perlu mengganti kepemilikan dari file atau folder tersebut. 
 
