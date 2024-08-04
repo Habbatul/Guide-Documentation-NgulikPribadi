@@ -23,6 +23,7 @@ Berisikan dokumentasi guide hasil ngulik pribadi dengan bahasa Indonesia.
   - instalasi php (modul dasar) untuk apache
   - mengecek dan menambah ekstensi php
   - setting untuk membaca `.htaccess`
+  - projek php dimana ada fitur mempengaruhi perubahan suatu file atau folder (chown)
 
 - <a href="https://github.com/Habbatul/Personal-Deployment-Doc-Ubuntu/blob/main/postgresinDocker.md">PostgreSQL di docker</a>
   - instalasi postgres di docker
