@@ -41,6 +41,11 @@ Berisikan dokumentasi guide hasil ngulik pribadi dengan bahasa Indonesia.
   - plugin vite agar bisa rollup sehingga tidak perlu di folder public
   - config github action untuk otomasi deployment hasil build dengan gh-pages
 
+- <a href="https://github.com/Habbatul/Guide-Documentation-NgulikPribadi/blob/main/nginx%20%26%20certbot%20dengan%20docker-compose.md">Deployment nginx & certbot dengan docker compose</a>
+  - instalasi docker compose plugin
+  - config docker-compose.yml
+  - setting reverse proxy & certbot dengan docker compose
+
 <br><br>
 ## Plan Selanjutnya :
 - <a href="">Deployment Naive (Ubuntu tanpa Nginx)</a>
